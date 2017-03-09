@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250B749D1E71AE4E0054CE27 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 250B749C1E71AE4E0054CE27 /* libsqlite3.tbd */; };
+		250B74AB1E71B0690054CE27 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B74A21E71B0690054CE27 /* FMDatabase.m */; };
+		250B74AC1E71B0690054CE27 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B74A41E71B0690054CE27 /* FMResultSet.m */; };
+		250B74AD1E71B0690054CE27 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B74A61E71B0690054CE27 /* FMDatabaseQueue.m */; };
+		250B74AE1E71B0690054CE27 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B74A81E71B0690054CE27 /* FMDatabaseAdditions.m */; };
+		250B74AF1E71B0690054CE27 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B74AA1E71B0690054CE27 /* FMDatabasePool.m */; };
+		250B74B21E71B1110054CE27 /* ConexionDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B74B11E71B1110054CE27 /* ConexionDB.swift */; };
+		250B74B41E71C3CD0054CE27 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B74B31E71C3CD0054CE27 /* CheckBox.swift */; };
+		250B74B71E71C4EB0054CE27 /* checked_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 250B74B51E71C4EB0054CE27 /* checked_checkbox.png */; };
+		250B74B81E71C4EB0054CE27 /* unchecked_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */; };
 		25BC03B41E70D76E005F6F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03B31E70D76E005F6F6D /* AppDelegate.swift */; };
 		25BC03B61E70D76E005F6F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03B51E70D76E005F6F6D /* ViewController.swift */; };
 		25BC03B91E70D76E005F6F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03B71E70D76E005F6F6D /* Main.storyboard */; };
@@ -14,6 +24,7 @@
 		25BC03BE1E70D76E005F6F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03BC1E70D76E005F6F6D /* LaunchScreen.storyboard */; };
 		25BC03C91E70D76E005F6F6D /* EncuestasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03C81E70D76E005F6F6D /* EncuestasTests.swift */; };
 		25BC03D41E70D76E005F6F6D /* EncuestasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */; };
+		25BC03E21E70DD1C005F6F6D /* prueba.csv in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03E11E70DD1C005F6F6D /* prueba.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250B749C1E71AE4E0054CE27 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		250B749F1E71B0690054CE27 /* Encuestas-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encuestas-Bridging-Header.h"; sourceTree = "<group>"; };
+		250B74A01E71B0690054CE27 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		250B74A11E71B0690054CE27 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		250B74A21E71B0690054CE27 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		250B74A31E71B0690054CE27 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		250B74A41E71B0690054CE27 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		250B74A51E71B0690054CE27 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		250B74A61E71B0690054CE27 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		250B74A71E71B0690054CE27 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		250B74A81E71B0690054CE27 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		250B74A91E71B0690054CE27 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		250B74AA1E71B0690054CE27 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		250B74B11E71B1110054CE27 /* ConexionDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConexionDB.swift; sourceTree = "<group>"; };
+		250B74B31E71C3CD0054CE27 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		250B74B51E71C4EB0054CE27 /* checked_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_checkbox.png; sourceTree = "<group>"; };
+		250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked_checkbox.png; sourceTree = "<group>"; };
 		25BC03B01E70D76E005F6F6D /* Encuestas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encuestas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BC03B31E70D76E005F6F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25BC03B51E70D76E005F6F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +75,7 @@
 		25BC03CF1E70D76E005F6F6D /* EncuestasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncuestasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuestasUITests.swift; sourceTree = "<group>"; };
 		25BC03D51E70D76E005F6F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25BC03E11E70DD1C005F6F6D /* prueba.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prueba.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250B749D1E71AE4E0054CE27 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +104,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250B749B1E71AE4E0054CE27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				250B749C1E71AE4E0054CE27 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		250B749E1E71AFFB0054CE27 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				250B74A01E71B0690054CE27 /* FMDB.h */,
+				250B74A11E71B0690054CE27 /* FMDatabase.h */,
+				250B74A21E71B0690054CE27 /* FMDatabase.m */,
+				250B74A31E71B0690054CE27 /* FMResultSet.h */,
+				250B74A41E71B0690054CE27 /* FMResultSet.m */,
+				250B74A51E71B0690054CE27 /* FMDatabaseQueue.h */,
+				250B74A61E71B0690054CE27 /* FMDatabaseQueue.m */,
+				250B74A71E71B0690054CE27 /* FMDatabaseAdditions.h */,
+				250B74A81E71B0690054CE27 /* FMDatabaseAdditions.m */,
+				250B74A91E71B0690054CE27 /* FMDatabasePool.h */,
+				250B74AA1E71B0690054CE27 /* FMDatabasePool.m */,
+				250B749F1E71B0690054CE27 /* Encuestas-Bridging-Header.h */,
+			);
+			name = fmdb;
+			sourceTree = "<group>";
+		};
 		25BC03A71E70D76E005F6F6D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +138,7 @@
 				25BC03C71E70D76E005F6F6D /* EncuestasTests */,
 				25BC03D21E70D76E005F6F6D /* EncuestasUITests */,
 				25BC03B11E70D76E005F6F6D /* Products */,
+				250B749B1E71AE4E0054CE27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +157,16 @@
 			children = (
 				25BC03B31E70D76E005F6F6D /* AppDelegate.swift */,
 				25BC03B51E70D76E005F6F6D /* ViewController.swift */,
+				250B74B11E71B1110054CE27 /* ConexionDB.swift */,
+				250B74B31E71C3CD0054CE27 /* CheckBox.swift */,
 				25BC03B71E70D76E005F6F6D /* Main.storyboard */,
 				25BC03BA1E70D76E005F6F6D /* Assets.xcassets */,
 				25BC03BC1E70D76E005F6F6D /* LaunchScreen.storyboard */,
 				25BC03BF1E70D76E005F6F6D /* Info.plist */,
+				25BC03E11E70DD1C005F6F6D /* prueba.csv */,
+				250B74B51E71C4EB0054CE27 /* checked_checkbox.png */,
+				250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */,
+				250B749E1E71AFFB0054CE27 /* fmdb */,
 			);
 			path = Encuestas;
 			sourceTree = "<group>";
@@ -193,6 +257,8 @@
 				TargetAttributes = {
 					25BC03AF1E70D76E005F6F6D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6VKPMZ9YA7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					25BC03C31E70D76E005F6F6D = {
@@ -233,8 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				25BC03BE1E70D76E005F6F6D /* LaunchScreen.storyboard in Resources */,
+				250B74B81E71C4EB0054CE27 /* unchecked_checkbox.png in Resources */,
+				250B74B71E71C4EB0054CE27 /* checked_checkbox.png in Resources */,
 				25BC03BB1E70D76E005F6F6D /* Assets.xcassets in Resources */,
 				25BC03B91E70D76E005F6F6D /* Main.storyboard in Resources */,
+				25BC03E21E70DD1C005F6F6D /* prueba.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250B74B41E71C3CD0054CE27 /* CheckBox.swift in Sources */,
+				250B74AD1E71B0690054CE27 /* FMDatabaseQueue.m in Sources */,
+				250B74AB1E71B0690054CE27 /* FMDatabase.m in Sources */,
 				25BC03B61E70D76E005F6F6D /* ViewController.swift in Sources */,
+				250B74AC1E71B0690054CE27 /* FMResultSet.m in Sources */,
+				250B74B21E71B1110054CE27 /* ConexionDB.swift in Sources */,
+				250B74AF1E71B0690054CE27 /* FMDatabasePool.m in Sources */,
 				25BC03B41E70D76E005F6F6D /* AppDelegate.swift in Sources */,
+				250B74AE1E71B0690054CE27 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +488,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 6VKPMZ9YA7;
 				INFOPLIST_FILE = Encuestas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasoft.Encuestas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encuestas/Encuestas-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,10 +504,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 6VKPMZ9YA7;
 				INFOPLIST_FILE = Encuestas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasoft.Encuestas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encuestas/Encuestas-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -505,6 +588,7 @@
 				25BC03DA1E70D76E005F6F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25BC03DB1E70D76E005F6F6D /* Build configuration list for PBXNativeTarget "EncuestasTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +597,7 @@
 				25BC03DD1E70D76E005F6F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25BC03DE1E70D76E005F6F6D /* Build configuration list for PBXNativeTarget "EncuestasUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +606,7 @@
 				25BC03E01E70D76E005F6F6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
