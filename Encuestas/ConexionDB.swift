@@ -35,7 +35,24 @@ class ConexionDB: NSObject {
                 if !(sesionDB?.executeStatements(sql_stmt))! {
                     print("Error: \(sesionDB?.lastErrorMessage())")
                 }
-          
+            } else {
+                print("Error: \(sesionDB?.lastErrorMessage())")
+            }
+        } else {
+            //Agregar sesión en base de datos
+            let sesionDB = FMDatabase(path: databasePath as String)
+            
+            if (sesionDB?.open())! {
+                // Crear tabla de Modi Restaurantes
+                var sql_stmt = "CREATE TABLE IF NOT EXISTS MODI_RESTAURANTES (ID INTEGER PRIMARY KEY, RESULTADO TEXT)"
+                if !(sesionDB?.executeStatements(sql_stmt))! {
+                    print("Error: \(sesionDB?.lastErrorMessage())")
+                }
+                // Crear tabla de Modi Comensales
+                sql_stmt = "CREATE TABLE IF NOT EXISTS MODI_COMENSALES (ID INTEGER PRIMARY KEY, RESULTADO TEXT)"
+                if !(sesionDB?.executeStatements(sql_stmt))! {
+                    print("Error: \(sesionDB?.lastErrorMessage())")
+                }
                 sesionDB?.close()
             } else {
                 print("Error: \(sesionDB?.lastErrorMessage())")
@@ -43,14 +60,14 @@ class ConexionDB: NSObject {
         }
         return databasePath
     }
-    func borrarEncuestas(databasePath:NSString){
+    func borrarEncuestas(databasePath:NSString, tableName:String){
         //Agregar sesión en base de datos
         let sesionDB = FMDatabase(path: databasePath as String)
         
         if (sesionDB?.open())! {
             
             //agregar registro
-            let insertSQL = "DELETE FROM 'AGRICOLA'"
+            let insertSQL = "DELETE FROM '\(tableName)'"
             
             let result = sesionDB?.executeUpdate(insertSQL,
                                                  withArgumentsIn: nil)
@@ -65,14 +82,14 @@ class ConexionDB: NSObject {
             print("Error: \(sesionDB?.lastErrorMessage())")
         }
     }
-    func agregarEncuesta(databasePath:NSString, Resultado:String){
+    func agregarEncuesta(databasePath:NSString, tableName:String, Resultado:String){
         //Agregar sesión en base de datos
         let sesionDB = FMDatabase(path: databasePath as String)
         
         if (sesionDB?.open())! {
             
             //agregar registro
-            let insertSQL = "INSERT INTO AGRICOLA (RESULTADO) VALUES ('\(Resultado)')"
+            let insertSQL = "INSERT INTO \(tableName) (RESULTADO) VALUES ('\(Resultado)')"
             
             let result = sesionDB?.executeUpdate(insertSQL,
                                                  withArgumentsIn: nil)
@@ -87,13 +104,13 @@ class ConexionDB: NSObject {
             print("Error: \(sesionDB?.lastErrorMessage())")
         }
     }
-    func obtenerResultados(databasePath: String)->[[String]]{
+    func obtenerResultados(databasePath: String, tableName: String)->[[String]]{
         //Buscar datos de sesion
         let sesionDB = FMDatabase(path: databasePath)
         //var datosSesion : Array<Array<String>>!
         var datos : [[String]] = []
         if (sesionDB?.open())! {
-            let querySQL = "SELECT * FROM AGRICOLA"
+            let querySQL = "SELECT * FROM \(tableName)"
             
             let results:FMResultSet? = sesionDB?.executeQuery(querySQL,
                                                               withArgumentsIn: nil)

@@ -17,6 +17,9 @@
 		250B74B41E71C3CD0054CE27 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B74B31E71C3CD0054CE27 /* CheckBox.swift */; };
 		250B74B71E71C4EB0054CE27 /* checked_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 250B74B51E71C4EB0054CE27 /* checked_checkbox.png */; };
 		250B74B81E71C4EB0054CE27 /* unchecked_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */; };
+		255F7DF61E7223EF00C583D1 /* PrincipalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7DF51E7223EF00C583D1 /* PrincipalTableViewController.swift */; };
+		255F7DF81E72391100C583D1 /* ModiComensalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255F7DF71E72391100C583D1 /* ModiComensalesViewController.swift */; };
+		259DF23E1E730CAE00947442 /* ModiRestaurantesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF23D1E730CAE00947442 /* ModiRestaurantesViewController.swift */; };
 		25BC03B41E70D76E005F6F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03B31E70D76E005F6F6D /* AppDelegate.swift */; };
 		25BC03B61E70D76E005F6F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03B51E70D76E005F6F6D /* ViewController.swift */; };
 		25BC03B91E70D76E005F6F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03B71E70D76E005F6F6D /* Main.storyboard */; };
@@ -24,7 +27,6 @@
 		25BC03BE1E70D76E005F6F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03BC1E70D76E005F6F6D /* LaunchScreen.storyboard */; };
 		25BC03C91E70D76E005F6F6D /* EncuestasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03C81E70D76E005F6F6D /* EncuestasTests.swift */; };
 		25BC03D41E70D76E005F6F6D /* EncuestasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */; };
-		25BC03E21E70DD1C005F6F6D /* prueba.csv in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03E11E70DD1C005F6F6D /* prueba.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		250B74B31E71C3CD0054CE27 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		250B74B51E71C4EB0054CE27 /* checked_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_checkbox.png; sourceTree = "<group>"; };
 		250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked_checkbox.png; sourceTree = "<group>"; };
+		255F7DF51E7223EF00C583D1 /* PrincipalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewController.swift; sourceTree = "<group>"; };
+		255F7DF71E72391100C583D1 /* ModiComensalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModiComensalesViewController.swift; sourceTree = "<group>"; };
+		259DF23D1E730CAE00947442 /* ModiRestaurantesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModiRestaurantesViewController.swift; sourceTree = "<group>"; };
 		25BC03B01E70D76E005F6F6D /* Encuestas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encuestas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BC03B31E70D76E005F6F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25BC03B51E70D76E005F6F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +80,6 @@
 		25BC03CF1E70D76E005F6F6D /* EncuestasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncuestasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuestasUITests.swift; sourceTree = "<group>"; };
 		25BC03D51E70D76E005F6F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25BC03E11E70DD1C005F6F6D /* prueba.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prueba.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,14 +160,16 @@
 			isa = PBXGroup;
 			children = (
 				25BC03B31E70D76E005F6F6D /* AppDelegate.swift */,
+				255F7DF51E7223EF00C583D1 /* PrincipalTableViewController.swift */,
 				25BC03B51E70D76E005F6F6D /* ViewController.swift */,
+				255F7DF71E72391100C583D1 /* ModiComensalesViewController.swift */,
+				259DF23D1E730CAE00947442 /* ModiRestaurantesViewController.swift */,
 				250B74B11E71B1110054CE27 /* ConexionDB.swift */,
 				250B74B31E71C3CD0054CE27 /* CheckBox.swift */,
 				25BC03B71E70D76E005F6F6D /* Main.storyboard */,
 				25BC03BA1E70D76E005F6F6D /* Assets.xcassets */,
 				25BC03BC1E70D76E005F6F6D /* LaunchScreen.storyboard */,
 				25BC03BF1E70D76E005F6F6D /* Info.plist */,
-				25BC03E11E70DD1C005F6F6D /* prueba.csv */,
 				250B74B51E71C4EB0054CE27 /* checked_checkbox.png */,
 				250B74B61E71C4EB0054CE27 /* unchecked_checkbox.png */,
 				250B749E1E71AFFB0054CE27 /* fmdb */,
@@ -303,7 +309,6 @@
 				250B74B71E71C4EB0054CE27 /* checked_checkbox.png in Resources */,
 				25BC03BB1E70D76E005F6F6D /* Assets.xcassets in Resources */,
 				25BC03B91E70D76E005F6F6D /* Main.storyboard in Resources */,
-				25BC03E21E70DD1C005F6F6D /* prueba.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,10 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259DF23E1E730CAE00947442 /* ModiRestaurantesViewController.swift in Sources */,
+				255F7DF61E7223EF00C583D1 /* PrincipalTableViewController.swift in Sources */,
 				250B74B41E71C3CD0054CE27 /* CheckBox.swift in Sources */,
 				250B74AD1E71B0690054CE27 /* FMDatabaseQueue.m in Sources */,
 				250B74AB1E71B0690054CE27 /* FMDatabase.m in Sources */,
 				25BC03B61E70D76E005F6F6D /* ViewController.swift in Sources */,
+				255F7DF81E72391100C583D1 /* ModiComensalesViewController.swift in Sources */,
 				250B74AC1E71B0690054CE27 /* FMResultSet.m in Sources */,
 				250B74B21E71B1110054CE27 /* ConexionDB.swift in Sources */,
 				250B74AF1E71B0690054CE27 /* FMDatabasePool.m in Sources */,

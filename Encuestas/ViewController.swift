@@ -12,6 +12,7 @@ import MessageUI
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var encuestasLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    let tableName = "AGRICOLA"
     let fileName = "encuesta_agricola.csv"//"sample.txt"
     let directory = NSTemporaryDirectory()
     var path2 : URL?
@@ -111,7 +112,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         contentsOfFile = "No.,1)Que se produce en el cultivo?,,,,,,,,,,2)Cual es la superficie cosechada de su cultivo?,,,,3)Cuantas toneladas produce por hectarea?,,,,,4)Pertenece a alguna asociacion de productores agricolas?,,,5)Recibe apoyo de alguna agencia de gobierno?,,,,,,,,6)Asiste a ferias-exposiciones organizadas por asociaciones o gobierno,,,7)Que considera mas importante en el proceso de produccion agricola?,,,,,,8)Cual es la principal problematica que enfrenta ante la posible perdida de cultivo?,,,,,,9)Cuenta con una metodologia para prevenir-mitigar su principal problematica,,,,10)Utiliza algun tipo de tecnologia en su cultivo?,,11)En que etapa de produccion utiliza tecnologia?,,,,,,12)Que tipo de tecnologia utiliza?,,,,,,,,13)Como se entera de la tecnologia que utiliza?,,,,,14)Esta dispuesto a cambiar la tecnologia que utiliza actualmente?,,,15)Cuanto estaria dispuesto a pagar por tecnologia?,,,\n,Limon,Papaya,Cana,Pina,Sandia,Melon,Chile V,Maiz G,Otro,Otro desc,menor a 5,entre 6 y 10,entre 11 y 15,mas de 16,menos de 20,entre 21 y 40,entre 41 y 60,entre 61 y 70,mas de 70,SI,NO,SI desc,SI,NO,SEFOME,SEDUR,SAGARPA,SEC ECONO,Otro,Otro desc,SI,NO,SI desc,Reduccion de costos,Control de riesgos,Uso optimo de recursos,Manejo de tiempo,Otra,Otra desc,Riesgos climaticos,Riesgos por plagas,Riesgos por propiedades de suelos,Riesgos por uso inadecuado de la maquinaria,Otra,Otra desc,SI,NO,SI desarrollada,SI comprada,SI,NO,Preparacion,Siembra,Riego,Fertilizante,Plaguicidas,Recoleccion,Tractor,Analisis de muestras de tierra,Sensores de humedad,Estaciones climatologicas,Sistema de riego,Vehiculos-drones,Otra,Otra desc,Pagina Web o Facebook,Por recomendaciones,Ferias-exposiciones,Otra,Otra desc,NO,SI-manteniendo precio,SI-ofreciendo mayor calidad,menos de 10000,entre 10001 y 30000,entre 30001 y 50000,mas de 50000\n"
         
         //Obtener resultado de las encuestas
-        encuestas = conexionDB.obtenerResultados(databasePath: databasePath as String)
+        encuestas = conexionDB.obtenerResultados(databasePath: databasePath as String, tableName: tableName)
         print("Encuestas:\(encuestas.count)")
         encuestasLabel.text = "\(encuestas.count)"
         for x in (0..<encuestas.count) {
@@ -119,13 +120,13 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
         
         // Escribir archivo
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("encuesta_agricola.csv")
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         path2 = path
         print(directory)
         print(path!)
         do {
             try contentsOfFile.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-            print("File sample.csv created at tmp directory")
+            print("File s created at tmp directory")
         } catch {
             
             print("Failed to create file")
@@ -161,7 +162,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             */
             if let fileData = NSData(contentsOf: path2!) {
                 print("File data loaded.")
-                mailComposer.addAttachmentData(fileData as Data, mimeType: "csv", fileName: "encuesta_agricola.csv")
+                mailComposer.addAttachmentData(fileData as Data, mimeType: "csv", fileName: fileName)
             }
             self.present(mailComposer, animated: true, completion: nil)
         }
@@ -171,7 +172,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         let resultadoEncuesta = "\(o1A.isChecked),\(o1B.isChecked),\(o1C.isChecked),\(o1D.isChecked),\(o1E.isChecked),\(o1F.isChecked),\(o1G.isChecked),\(o1H.isChecked),\(o1I.isChecked),\(o1ITextField.text!),\(o2A.isChecked),\(o2B.isChecked),\(o2C.isChecked),\(o2D.isChecked),\(o3A.isChecked),\(o3B.isChecked),\(o3C.isChecked),\(o3D.isChecked),\(o3E.isChecked),\(o4A.isChecked),\(o4B.isChecked),\(o4ATextField.text!),\(o5A.isChecked),\(o5B.isChecked),\(o5A1.isChecked),\(o5A2.isChecked),\(o5A3.isChecked),\(o5A4.isChecked),\(o5A5.isChecked),\(o5A5TextField.text!),\(o6A.isChecked),\(o6B.isChecked),\(o6ATextField.text!),\(o7A.isChecked),\(o7B.isChecked),\(o7C.isChecked),\(o7D.isChecked),\(o7E.isChecked),\(o7ETextField.text!),\(o8A.isChecked),\(o8B.isChecked),\(o8C.isChecked),\(o8D.isChecked),\(o8E.isChecked),\(o8ETextField.text!),\(o9A.isChecked),\(o9B.isChecked),\(o9A1.isChecked),\(o9A2.isChecked),\(o10A.isChecked),\(o10B.isChecked),\(o11A.isChecked),\(o11B.isChecked),\(o11C.isChecked),\(o11D.isChecked),\(o11E.isChecked),\(o11F.isChecked),\(o12A.isChecked),\(o12B.isChecked),\(o12C.isChecked),\(o12D.isChecked),\(o12E.isChecked),\(o12F.isChecked),\(o12G.isChecked),\(o12GTextField.text!),\(o13A.isChecked),\(o13B.isChecked),\(o13C.isChecked),\(o13D.isChecked),\(o13DTextField.text!),\(o14A.isChecked),\(o14B.isChecked),\(o14C.isChecked),\(o15A.isChecked),\(o15B.isChecked),\(o15C.isChecked),\(o15D.isChecked)"
         
         //Guardarlo en SQLite
-        conexionDB.agregarEncuesta(databasePath: databasePath, Resultado: resultadoEncuesta)
+        conexionDB.agregarEncuesta(databasePath: databasePath, tableName: tableName, Resultado: resultadoEncuesta)
         
         //Restaurando encuesta
         restaurarEncuesta()
@@ -187,7 +188,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
         optionAlert.addAction(UIAlertAction(title: "SI, eliminar", style: .default, handler: { (action: UIAlertAction) in
             print("User accepted")
-            self.conexionDB.borrarEncuestas(databasePath: self.databasePath)
+            self.conexionDB.borrarEncuestas(databasePath: self.databasePath, tableName: self.tableName)
             self.restaurarEncuesta()
             self.scrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
         }))
@@ -280,7 +281,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         o15D.isChecked = 0
         
         //Obteniendo encuestas
-        encuestas = conexionDB.obtenerResultados(databasePath: databasePath as String)
+        encuestas = conexionDB.obtenerResultados(databasePath: databasePath as String, tableName: tableName)
         print("Encuestas:\(encuestas)")
         encuestasLabel.text = "\(encuestas.count)"
     }
