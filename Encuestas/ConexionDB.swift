@@ -53,6 +53,11 @@ class ConexionDB: NSObject {
                 if !(sesionDB?.executeStatements(sql_stmt))! {
                     print("Error: \(sesionDB?.lastErrorMessage())")
                 }
+                // Crear tabla de Encuesta ROMI
+                sql_stmt = "CREATE TABLE IF NOT EXISTS ENCUESTA_ROMI (ID INTEGER PRIMARY KEY, RESULTADO TEXT)"
+                if !(sesionDB?.executeStatements(sql_stmt))! {
+                    print("Error: \(sesionDB?.lastErrorMessage())")
+                }
                 sesionDB?.close()
             } else {
                 print("Error: \(sesionDB?.lastErrorMessage())")

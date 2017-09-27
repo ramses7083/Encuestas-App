@@ -9,7 +9,7 @@
 import UIKit
 
 class PrincipalTableViewController: UITableViewController {
-    let encuestas = ["Agricultura","MODI_Restaurantes","MODI_Comensales"]
+    let encuestas = ["Agricultura","MODI_Restaurantes","MODI_Comensales","ENCUESTA_ROMI"]
     override func viewDidLoad() {
         super.viewDidLoad()
     

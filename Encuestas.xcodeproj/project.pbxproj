@@ -27,6 +27,7 @@
 		25BC03BE1E70D76E005F6F6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25BC03BC1E70D76E005F6F6D /* LaunchScreen.storyboard */; };
 		25BC03C91E70D76E005F6F6D /* EncuestasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03C81E70D76E005F6F6D /* EncuestasTests.swift */; };
 		25BC03D41E70D76E005F6F6D /* EncuestasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */; };
+		25E90BB51F7C0FFF00C46EE7 /* EncuestaROMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E90BB41F7C0FFF00C46EE7 /* EncuestaROMIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		25BC03CF1E70D76E005F6F6D /* EncuestasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncuestasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25BC03D31E70D76E005F6F6D /* EncuestasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuestasUITests.swift; sourceTree = "<group>"; };
 		25BC03D51E70D76E005F6F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E90BB41F7C0FFF00C46EE7 /* EncuestaROMIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncuestaROMIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				25BC03B51E70D76E005F6F6D /* ViewController.swift */,
 				255F7DF71E72391100C583D1 /* ModiComensalesViewController.swift */,
 				259DF23D1E730CAE00947442 /* ModiRestaurantesViewController.swift */,
+				25E90BB41F7C0FFF00C46EE7 /* EncuestaROMIViewController.swift */,
 				250B74B11E71B1110054CE27 /* ConexionDB.swift */,
 				250B74B31E71C3CD0054CE27 /* CheckBox.swift */,
 				25BC03B71E70D76E005F6F6D /* Main.storyboard */,
@@ -338,6 +341,7 @@
 				250B74B41E71C3CD0054CE27 /* CheckBox.swift in Sources */,
 				250B74AD1E71B0690054CE27 /* FMDatabaseQueue.m in Sources */,
 				250B74AB1E71B0690054CE27 /* FMDatabase.m in Sources */,
+				25E90BB51F7C0FFF00C46EE7 /* EncuestaROMIViewController.swift in Sources */,
 				25BC03B61E70D76E005F6F6D /* ViewController.swift in Sources */,
 				255F7DF81E72391100C583D1 /* ModiComensalesViewController.swift in Sources */,
 				250B74AC1E71B0690054CE27 /* FMResultSet.m in Sources */,
@@ -499,6 +503,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6VKPMZ9YA7;
 				INFOPLIST_FILE = Encuestas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasoft.Encuestas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +520,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6VKPMZ9YA7;
 				INFOPLIST_FILE = Encuestas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasoft.Encuestas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
